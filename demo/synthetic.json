@@ -1,0 +1,159 @@
+{
+  "SchemaVersion": 1,
+  "Mode": "Synthetic",
+  "Notice": "Hand-authored fictional observations. No live collection. Reserved example.test and RFC 5737 addresses.",
+  "Rows": [
+    {
+      "Check": "DCInventory",
+      "Target": "dc01.demo.example.test",
+      "Status": "Info",
+      "Summary": "SYNTHETIC domain controller",
+      "Evidence": "Site=Demo-HQ; IPv4=192.0.2.10; OS=Windows Server 2022; GC=True; RODC=False",
+      "Recommendation": ""
+    },
+    {
+      "Check": "DCInventory",
+      "Target": "dc02.demo.example.test",
+      "Status": "Info",
+      "Summary": "SYNTHETIC domain controller",
+      "Evidence": "Site=Demo-Branch; IPv4=192.0.2.11; OS=Windows Server 2022; GC=True; RODC=False",
+      "Recommendation": ""
+    },
+    {
+      "Check": "FSMO",
+      "Target": "demo.example.test",
+      "Status": "Info",
+      "Summary": "PDCEmulator",
+      "Evidence": "dc01.demo.example.test",
+      "Recommendation": "Ownership only; reachability not asserted."
+    },
+    {
+      "Check": "FSMO",
+      "Target": "demo.example.test",
+      "Status": "Info",
+      "Summary": "RIDMaster",
+      "Evidence": "dc01.demo.example.test",
+      "Recommendation": "Ownership only; reachability not asserted."
+    },
+    {
+      "Check": "FSMO",
+      "Target": "demo.example.test",
+      "Status": "Info",
+      "Summary": "InfrastructureMaster",
+      "Evidence": "dc01.demo.example.test",
+      "Recommendation": "Ownership only; reachability not asserted."
+    },
+    {
+      "Check": "FSMO",
+      "Target": "demo.example.test",
+      "Status": "Info",
+      "Summary": "SchemaMaster",
+      "Evidence": "dc01.demo.example.test",
+      "Recommendation": "Ownership only; reachability not asserted."
+    },
+    {
+      "Check": "FSMO",
+      "Target": "demo.example.test",
+      "Status": "Info",
+      "Summary": "DomainNamingMaster",
+      "Evidence": "dc01.demo.example.test",
+      "Recommendation": "Ownership only; reachability not asserted."
+    },
+    {
+      "Check": "Replication",
+      "Target": "dc01.demo.example.test",
+      "Status": "Pass",
+      "Summary": "SYNTHETIC recent successful inbound replication",
+      "Evidence": "Partner=dc02; Partition=DC=demo,DC=example,DC=test; LastReplicationResult=0; AgeHours=1",
+      "Recommendation": ""
+    },
+    {
+      "Check": "Replication",
+      "Target": "dc02.demo.example.test",
+      "Status": "Warning",
+      "Summary": "SYNTHETIC stale inbound replication",
+      "Evidence": "Partner=dc01; LastReplicationResult=1722; AgeHours=30; ConsecutiveFailures=2",
+      "Recommendation": "Review RPC connectivity and site schedule. No synchronization initiated."
+    },
+    {
+      "Check": "DNS",
+      "Target": "dc01.demo.example.test",
+      "Status": "Pass",
+      "Summary": "SYNTHETIC LDAP DC locator record",
+      "Evidence": "_ldap._tcp.dc._msdcs.demo.example.test -> dc01.demo.example.test:389",
+      "Recommendation": "Locator check only."
+    },
+    {
+      "Check": "DNS",
+      "Target": "dc02.demo.example.test",
+      "Status": "Error",
+      "Summary": "SYNTHETIC resolver query unavailable",
+      "Evidence": "Simulated timeout; no live DNS query performed.",
+      "Recommendation": "Review configured resolver and access; unknown is not healthy."
+    },
+    {
+      "Check": "SYSVOL",
+      "Target": "dc01.demo.example.test/SYSVOL",
+      "Status": "Pass",
+      "Summary": "SYNTHETIC share root readable",
+      "Evidence": "\\\\dc01.demo.example.test\\SYSVOL",
+      "Recommendation": "Does not prove DFSR health."
+    },
+    {
+      "Check": "SYSVOL",
+      "Target": "dc01.demo.example.test/NETLOGON",
+      "Status": "Pass",
+      "Summary": "SYNTHETIC share root readable",
+      "Evidence": "\\\\dc01.demo.example.test\\NETLOGON",
+      "Recommendation": ""
+    },
+    {
+      "Check": "TimeSync",
+      "Target": "dc01.demo.example.test",
+      "Status": "Info",
+      "Summary": "SYNTHETIC W32Time observation",
+      "Evidence": "Source: ntp.demo.example.test; Stratum: 3; Leap Indicator: 0",
+      "Recommendation": "Illustrative text only. Review last sync, source and hierarchy; offset unverified."
+    },
+    {
+      "Check": "PrivilegedGroups",
+      "Target": "S-1-5-21-111111111-222222222-333333333-512",
+      "Status": "Info",
+      "Summary": "SYNTHETIC direct privileged member",
+      "Evidence": "Name=demo-admin; objectClass=user",
+      "Recommendation": "Review business justification and nested groups."
+    },
+    {
+      "Check": "InactiveAccounts",
+      "Target": "CN=demo-old-user,DC=demo,DC=example,DC=test",
+      "Status": "Warning",
+      "Summary": "SYNTHETIC enabled inactivity candidate",
+      "Evidence": "Type=User; AgeDays=120",
+      "Recommendation": "Validate with owner; do not disable automatically."
+    },
+    {
+      "Check": "InactiveAccounts",
+      "Target": "CN=DEMO-OLD-PC,DC=demo,DC=example,DC=test",
+      "Status": "Warning",
+      "Summary": "SYNTHETIC enabled inactivity candidate",
+      "Evidence": "Type=Computer; AgeDays=180",
+      "Recommendation": "Confirm inventory and usage."
+    },
+    {
+      "Check": "PasswordPolicy",
+      "Target": "demo.example.test",
+      "Status": "Warning",
+      "Summary": "SYNTHETIC password policy baseline finding",
+      "Evidence": "MinPasswordLength=8; ConfiguredBaseline=14; ReversibleEncryptionEnabled=False",
+      "Recommendation": "Review organisation policy. No automatic changes."
+    },
+    {
+      "Check": "GPOInventory",
+      "Target": "00000000-0000-4000-8000-000000000001",
+      "Status": "Info",
+      "Summary": "SYNTHETIC Demo Workstation Baseline",
+      "Evidence": "GpoStatus=AllSettingsEnabled; Owner=DEMO\\Domain Admins",
+      "Recommendation": "Inventory only; links and resultant policy not checked."
+    }
+  ]
+}
