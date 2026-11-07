@@ -1,0 +1,77 @@
+Executed 2026-11-07; macOS; PowerShell 7.6.9
+Expected invalid-config diagnostic appears below as part of the negative test.
+
+PASS: PowerShell parser: Invoke-RelayADHealth.ps1
+PASS: No remote mutation/download commands: Invoke-RelayADHealth.ps1
+PASS: PowerShell parser: Run-Tests.ps1
+PASS: PowerShell parser: Relay.ADHealth.psm1
+PASS: No remote mutation/download commands: Relay.ADHealth.psm1
+PASS: Ten configured checks
+PASS: Reject configuration: Unknown
+PASS: Reject configuration: Range
+PASS: Reject configuration: Host
+PASS: Reject configuration: Duplicate
+PASS: Reject configuration: Missing
+PASS: Reject configuration: Type
+PASS: CSV formula defense: =SUM(A1)
+PASS: CSV formula defense: +cmd
+PASS: CSV formula defense: -cmd
+PASS: CSV formula defense: @SUM(A1)
+PASS: CSV formula defense: =1
+PASS: CSV formula defense: =1
+PASS: Ordinary CSV text preserved
+PASS: Recent replication passes
+PASS: Stale replication warns
+PASS: Missing replication success warns
+PASS: Replication error warns
+PASS: Inactivity filter excludes disabled and newly created unused accounts
+PASS: HTML encoding prevents injected markup
+PASS: CSV export neutralizes formulas
+PASS: Demo report is clearly labeled
+PASS: Existing output cannot be overwritten or mixed
+PASS: Live confidentiality banner
+PASS: Checksum: DNS.csv
+PASS: Checksum: findings.csv
+PASS: Checksum: manifest.json
+PASS: Checksum: report.html
+PASS: Mocked collector: DCInventory
+PASS: Mocked collector: FSMO
+PASS: Mocked collector: Replication
+PASS: Mocked collector: DNS
+PASS: Mocked collector: SYSVOL
+PASS: Mocked collector: TimeSync
+PASS: Mocked collector: PrivilegedGroups
+PASS: Mocked collector: InactiveAccounts
+PASS: Mocked collector: PasswordPolicy
+PASS: Mocked collector: GPOInventory
+PASS: Access denial is Error, never Pass
+PASS: Empty replication is inconclusive
+PASS: Reject wrong-domain server
+PASS: Truncation is explicit
+PASS: Account cap is honored
+PASS: Bounded job timeout is reported
+PASS: Jobs cleaned up
+Report: <temporary test output>/report.html
+PASS: Demo returns 2 for deliberately simulated collection error
+Report: <temporary test output>/report.html
+PASS: Info-only demo exit 0 does not imply complete health
+PASS: Disabled checks visibly skipped
+PASS: Live configuration identifiers do not leak into demo
+Write-Error: RELAY could not complete: Invalid integer range: InactiveDays
+PASS: Malformed config exit 3
+PASS: Malformed config writes no report
+PASS: Demo manifest provenance
+RELAY: DCInventory
+RELAY: FSMO
+RELAY: Replication
+RELAY: DNS
+RELAY: SYSVOL
+RELAY: TimeSync
+RELAY: PrivilegedGroups
+RELAY: InactiveAccounts
+RELAY: PasswordPolicy
+RELAY: GPOInventory
+Report: <temporary test output>/report.html
+PASS: Unsupported live runtime blocked with report
+PASS: Every live check marked untested after preflight failure
+SUCCESS: 59 assertions. Offline tests only; Windows/AD acceptance remains required.
