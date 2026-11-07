@@ -1,0 +1,41 @@
+{
+  "Product": "RELAY AD Health Toolkit",
+  "Version": "0.1.0",
+  "Mode": "Demo",
+  "RunId": "20261107T094513Z-03ea8bdb",
+  "GeneratedUtc": "2026-11-07T09:45:13.8382770Z",
+  "PowerShell": "7.6.9",
+  "Counts": {
+    "Pass": 4,
+    "Warning": 4,
+    "Error": 1,
+    "Info": 10,
+    "Skipped": 0
+  },
+  "Config": {
+    "SchemaVersion": 1,
+    "Domain": "demo.example.test",
+    "Server": "dc01.demo.example.test",
+    "Checks": [
+      "DCInventory",
+      "FSMO",
+      "Replication",
+      "DNS",
+      "SYSVOL",
+      "TimeSync",
+      "PrivilegedGroups",
+      "InactiveAccounts",
+      "PasswordPolicy",
+      "GPOInventory"
+    ],
+    "InactiveDays": 90,
+    "ReplicationMaxAgeHours": 24,
+    "MaxAccountsPerType": 5000,
+    "MaxDomainControllers": 25,
+    "CheckTimeoutSeconds": 180,
+    "NativeTimeoutSeconds": 10,
+    "MinimumPasswordLength": 14
+  },
+  "Scope": "One configured domain; forest FSMO and root privileged groups also queried",
+  "Interpretation": "No overall healthy verdict. Info/Skipped/Error are not Pass."
+}
