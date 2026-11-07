@@ -1,0 +1,2 @@
+"RunId","Mode","Check","Target","Status","Summary","Evidence","Recommendation","CollectedAtUtc"
+"20261107T094513Z-03ea8bdb","Demo","GPOInventory","00000000-0000-4000-8000-000000000001","Info","SYNTHETIC Demo Workstation Baseline","GpoStatus=AllSettingsEnabled; Owner=DEMO\Domain Admins","Inventory only; links and resultant policy not checked.","2026-11-07T09:45:13.7988710Z"

@@ -1,0 +1,3 @@
+"RunId","Mode","Check","Target","Status","Summary","Evidence","Recommendation","CollectedAtUtc"
+"20261107T094513Z-03ea8bdb","Demo","DNS","dc01.demo.example.test","Pass","SYNTHETIC LDAP DC locator record","_ldap._tcp.dc._msdcs.demo.example.test -> dc01.demo.example.test:389","Locator check only.","2026-11-07T09:45:13.7973440Z"
+"20261107T094513Z-03ea8bdb","Demo","DNS","dc02.demo.example.test","Error","SYNTHETIC resolver query unavailable","Simulated timeout; no live DNS query performed.","Review configured resolver and access; unknown is not healthy.","2026-11-07T09:45:13.7973960Z"

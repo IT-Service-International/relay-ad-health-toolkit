@@ -1,0 +1,6 @@
+"RunId","Mode","Check","Target","Status","Summary","Evidence","Recommendation","CollectedAtUtc"
+"20261107T094513Z-03ea8bdb","Demo","FSMO","demo.example.test","Info","PDCEmulator","dc01.demo.example.test","Ownership only; reachability not asserted.","2026-11-07T09:45:13.7966370Z"
+"20261107T094513Z-03ea8bdb","Demo","FSMO","demo.example.test","Info","RIDMaster","dc01.demo.example.test","Ownership only; reachability not asserted.","2026-11-07T09:45:13.7967020Z"
+"20261107T094513Z-03ea8bdb","Demo","FSMO","demo.example.test","Info","InfrastructureMaster","dc01.demo.example.test","Ownership only; reachability not asserted.","2026-11-07T09:45:13.7967560Z"
+"20261107T094513Z-03ea8bdb","Demo","FSMO","demo.example.test","Info","SchemaMaster","dc01.demo.example.test","Ownership only; reachability not asserted.","2026-11-07T09:45:13.7968080Z"
+"20261107T094513Z-03ea8bdb","Demo","FSMO","demo.example.test","Info","DomainNamingMaster","dc01.demo.example.test","Ownership only; reachability not asserted.","2026-11-07T09:45:13.7968570Z"
