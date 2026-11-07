@@ -1,0 +1,9 @@
+# Never commit run output or customer configuration.
+/reports/
+**/live/
+*.local.json
+/config/live*.json
+*.log
+*.tmp
+.DS_Store
+# Only demo/sample is an intentionally distributable generated report.
