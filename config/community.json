@@ -1,0 +1,13 @@
+{
+  "SchemaVersion": 1,
+  "Domain": "demo.example.test",
+  "Server": "dc01.demo.example.test",
+  "Checks": ["DCInventory", "FSMO", "Replication", "DNS", "SYSVOL", "TimeSync", "PrivilegedGroups", "InactiveAccounts", "PasswordPolicy", "GPOInventory"],
+  "InactiveDays": 90,
+  "ReplicationMaxAgeHours": 24,
+  "MaxAccountsPerType": 5000,
+  "MaxDomainControllers": 25,
+  "CheckTimeoutSeconds": 180,
+  "NativeTimeoutSeconds": 10,
+  "MinimumPasswordLength": 14
+}
