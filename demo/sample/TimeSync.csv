@@ -1,0 +1,2 @@
+"RunId","Mode","Check","Target","Status","Summary","Evidence","Recommendation","CollectedAtUtc"
+"20261107T094513Z-03ea8bdb","Demo","TimeSync","dc01.demo.example.test","Info","SYNTHETIC W32Time observation","Source: ntp.demo.example.test; Stratum: 3; Leap Indicator: 0","Illustrative text only. Review last sync, source and hierarchy; offset unverified.","2026-11-07T09:45:13.7979600Z"

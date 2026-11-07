@@ -1,0 +1,3 @@
+"RunId","Mode","Check","Target","Status","Summary","Evidence","Recommendation","CollectedAtUtc"
+"20261107T094513Z-03ea8bdb","Demo","SYSVOL","dc01.demo.example.test/SYSVOL","Pass","SYNTHETIC share root readable","\\dc01.demo.example.test\SYSVOL","Does not prove DFSR health.","2026-11-07T09:45:13.7976300Z"
+"20261107T094513Z-03ea8bdb","Demo","SYSVOL","dc01.demo.example.test/NETLOGON","Pass","SYNTHETIC share root readable","\\dc01.demo.example.test\NETLOGON","","2026-11-07T09:45:13.7977350Z"

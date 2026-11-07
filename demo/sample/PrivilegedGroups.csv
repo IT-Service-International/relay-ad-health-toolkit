@@ -1,0 +1,2 @@
+"RunId","Mode","Check","Target","Status","Summary","Evidence","Recommendation","CollectedAtUtc"
+"20261107T094513Z-03ea8bdb","Demo","PrivilegedGroups","S-1-5-21-111111111-222222222-333333333-512","Info","SYNTHETIC direct privileged member","Name=demo-admin; objectClass=user","Review business justification and nested groups.","2026-11-07T09:45:13.7981760Z"
