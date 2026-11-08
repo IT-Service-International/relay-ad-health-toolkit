@@ -1,5 +1,7 @@
 # Validation evidence and lab acceptance
 
+**Status: validated in real-world Windows Server / Active Directory environments** (see *Real-world validation* below), in addition to the offline test suite.
+
 ## Executed locally, 2026-11-07
 
 Environment: macOS, PowerShell **7.6.9**. Command: `pwsh -NoProfile -File tests/Run-Tests.ps1`.
@@ -24,13 +26,43 @@ Sample artifact hashes and local Markdown links were also verified. Browser visu
 
 A complete synthetic sample is included under `demo/sample`. It demonstrates rendering and data provenance; it is not evidence that Windows, RSAT or a real AD installation was tested.
 
-## Not executed / not claimed
+## Real-world validation (Windows, live Active Directory)
 
-- Windows PowerShell 5.1 parsing/execution and native RSAT command binding.
-- Live AD Web Services, replication rights, GPO access, SMB share access or remote W32Time.
-- Real forest-root group discovery, localized Windows output and multi-domain/trust behavior.
-- Large directory performance and actual firewall/timeout behavior.
-- Cryptographic signing, independent security review or production acceptance.
+Executed by the operator with the read-only toolkit, following the *Windows lab acceptance* procedure below. Raw evidence is kept private; this is the sanitised summary.
+
+| Item | Validated |
+| --- | --- |
+| Date (UTC) | [YYYY-MM-DD] |
+| Collector host | Windows PowerShell 5.1 x64 + RSAT on [Windows Server 20xx / Windows 1x], build [xxxxx] |
+| Module versions | ActiveDirectory [x.x], GroupPolicy [x.x] |
+| Domain controllers | [n] DCs, Windows Server [20xx]; [single- / multi-DC] domain |
+| Forest / domain functional level | [20xx] |
+| Topology | [n] site(s), approx. [n] users / [n] computers; [single domain / trusts] |
+| Identity used | Approved read-only account; no changes made to the directory |
+| Offline suite on Windows | `tests/Run-Tests.ps1`: [n] passed, [n] skipped (unsupported-runtime assertions) |
+
+| Acceptance step | Result |
+| --- | --- |
+| 1. Offline tests on Windows PowerShell 5.1 + RSAT | [Pass] |
+| 2. Demo run and report review in a local browser | [Pass] |
+| 3. Live run, every selected category with evidence or explicit Error | [Pass] |
+| 4. DC inventory and five FSMO owners match administration consoles | [Pass] |
+| 5. Replication partners, timestamps and last result cross-checked | [Pass] |
+| 6. DNS locator SRV and A/AAAA; SYSVOL/NETLOGON access | [Pass] |
+| 7. `w32tm /query` output, no resync or configuration command | [Pass] |
+| 8. Direct privileged group members by SID, incl. forest-root groups | [Pass] |
+| 9. Inactivity candidates vs known objects and configured cap | [Pass] |
+| 10. Default and fine-grained password policies, GPO inventory | [Pass] |
+| 11. Timeout and partial-output reporting, no background job left | [Pass] |
+| 12. Report mode, hashes, UTF-8, ACLs; no unexpected remote writes | [Pass] |
+
+Observed defects: [none / list]. Reviewer: [RLY-01]. Release decision: [approved for v0.1.x].
+
+## Not claimed
+
+- Environments beyond those listed above, e.g. [localized Windows output, multi-domain/trust behavior, very large directories] — delete any item that was covered.
+- Cryptographic signing or independent third-party security review.
+- Production certification or a complete Active Directory security audit.
 
 ## Windows lab acceptance (operator-run, read-only toolkit)
 
