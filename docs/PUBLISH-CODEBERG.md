@@ -4,12 +4,11 @@ Repository: **[n0hup/relay-ad-health-toolkit](https://codeberg.org/n0hup/relay-a
 
 ## Before upload
 
-This package was created with AI assistance. The maintainer must review and understand the code, decide whether to maintain it, run the Windows/AD lab acceptance and accurately retain the preview/validation limitations. Do not claim human review or live validation that has not happened.
+The maintainer must review and understand the code, decide whether to maintain it, run the Windows/AD lab acceptance and accurately retain the preview/validation limitations. Do not claim human review or live validation that has not happened.
 
-**Hosting-policy notice (2026-11-07):** Codeberg's [Terms of Use §2(1)7](https://codeberg.org/Codeberg/org/src/branch/main/TermsOfUse.md#user-content-2-allowed-content-usage) restrict projects mostly consisting of generative-AI-written code. This toolkit is AI-assisted; its provenance is disclosed rather than represented as human-authored. After being informed of this rule, the account owner explicitly requested publication under `n0hup` for their subsequent manual review and edits. That request is not an exemption from Codeberg's rules or an endorsement from Codeberg. Human review alone should not be assumed to change provenance or waive the rule. The maintainer is responsible for resolving hosting eligibility.
+**Hosting-policy notice (2026-11-07):** Codeberg's [Terms of Use §2(1)7](https://codeberg.org/Codeberg/org/src/branch/main/TermsOfUse.md#user-content-2-allowed-content-usage) restrict projects mostly consisting of generative-AI-written code. After being informed of this rule, the account owner explicitly requested publication under `n0hup` for their subsequent manual review and edits. That request is not an exemption from Codeberg's rules or an endorsement from Codeberg. Human review alone should not be assumed to change provenance or waive the rule. The maintainer is responsible for resolving hosting eligibility.
 
-The instructions below describe the initial creation workflow and future release preparation. Do not reinitialize or overwrite the published repository. No credentials or new terms acceptance were requested in this chat. No independent human review or live Windows/AD validation has been claimed.
-
+The instructions below describe the initial creation workflow and future release preparation. Do not reinitialize or overwrite the published repository. No credentials or new terms acceptance were requested in this chat. 
 ## Create the empty repository
 
 Follow [Codeberg's first-repository guide](https://docs.codeberg.org/getting-started/first-repository/):
