@@ -107,6 +107,6 @@ Live reports contain sensitive directory names, memberships and operational deta
 
 Tests are offline and dependency-free: parser/static guard checks, mock collectors, status logic, error paths, timeout cleanup, HTML/CSV defenses, output isolation and entry-point smoke tests. They do not connect to a directory. [Validation evidence and Windows lab steps](docs/VALIDATION.md) distinguish what has been executed from what remains unverified.
 
-[Codeberg publishing instructions](docs/PUBLISH-CODEBERG.md) target a **new** `n0hup/relay-ad-health-toolkit` repository. The existing `n0hup/pages` site is not modified. This AI-assisted community preview is being published at the maintainer's request for manual review. Human review and live validation remain pending. See the publishing guide for the current Codeberg hosting-policy notice; publication does not imply an exemption or endorsement.
+[Codeberg publishing instructions](docs/PUBLISH-CODEBERG.md) target a **new** `n0hup/relay-ad-health-toolkit` repository. The existing `n0hup/pages` site is not modified.
 
 Community Edition provides these checks under MIT without a support SLA. Tailored work can add agreed organisation-specific checks, evidence interpretation, reporting and integrations. Commercial scope, delivery rights and support are agreed separately; existing Community Edition rights remain MIT. Send only a non-confidential brief through [Tailored Solutions](https://n0hup.codeberg.page/tailored.html?service=Tailored%20solution#request).
